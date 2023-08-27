@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&display=swap');
+*{
+  font-family: Lexend;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 50px;
+  align-items: center;
+}
+.dark-mode{
+    background-color: #2B2B2B;
+    color: rgb(255, 255, 255);
+    transition: .3s;
+}
+.dark-mode .content .text h1{
+    color: white;
+    transition: .3s;
+}
+.dark-mode header nav #links a{
+    color: white;
+    transition: .3s;
+}
+.dark-mode .segunda-secao .console{
+  background: white;
+  transition: .3s;
+}
+.dark-mode .segunda-secao .console h1{
+  color: black;
+  transition: .3s;
+}
+.dark-mode header .conta i{
+  color: white;
+  transition: .3s;
+}
+header nav{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+header nav .logo i{
+  color: green;
+}
+header nav #links{
+  display: flex;
+  gap: 3rem;
+}
+header nav #links a{
+  color: black;
+}
+header nav #links a i{
+  color: green;
+}
+header .conta i{
+  font-size: 30px;
+  color: #404040;
+}
+
+.main{
+  display: flex;
+  padding: 150px 60px;
+  justify-content: space-between;
+}
+.content .text{
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content .text h1{
+  font-size: 64px;
+  color: #404040;
+}
+.content .text p{
+  width: 500px;
+}
+
+.content .saiba-mais{
+  padding-top: 3rem;
+}
+.content .saiba-mais a{
+  background: green;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 6px;
+  transition: .3s;
+}
+.content .saiba-mais a:hover{
+   background: #49A656;
+}
+
+/* Segunda section */
+.segunda-secao{
+  height: 100vh;
+}
+.segunda-secao .console{
+    width: 80%;
+    height: 800px;
+    background-color: #2B2B2B;
+    margin: 0 auto;
+    border-radius: 50px;
+    text-align: center;
+}
+.segunda-secao .console h1{
+  font-size: 50px;
+  padding-top: 60px;
+  color: white;
+  font-weight: 300;
+}
+.segunda-secao .console .console-img{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+
+
+
+
+/*BOTÃO DISCORD*/
+
+.botao_discord{
+}
+.link-discord {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: 40px;
+    background-color: #404EED;
+    box-shadow: 0 0 10px #404EED, 0 0 40px #404EED, 0 0 80px #404EED;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 25px;
+    z-index: 1000;
+}
+
+#discord1 {
+    margin-top: 17px;
+}
+
+.link-discord:hover {
+    transform: translateY(-10px);
+    transition: all 1s;
+    transform-origin: button;
+
+    box-shadow: 0 0 10px #404EED, 0 0 40px #404EED, 0 0 80px #404EED;
+    background-color: #404EED;
+}
+
+.link-discord::before, .link-discord:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    top: -3px;
+    left: -3px;
+    border: 2px solid #404EED;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animacao-botao-discord 1.5s linear infinite;
+}
+.button button:after{
+    animation-delay: .5s;
+}
+@keyframes animacao-botao-discord {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
